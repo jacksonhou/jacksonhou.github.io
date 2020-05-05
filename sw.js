@@ -7,9 +7,9 @@ var CACHE_FILES = [
   '/css/index.css',
   '/css/toutiao1.css',
   '/css/toutiao2.css',
-  '/js/ajax.css',
-  '/js/jquery.min.css',
-  '/js/sw.css'
+  '/js/ajax.js',
+  '/js/jquery.min.js',
+  '/js/sw.js'
 ];
 self.addEventListener('install', function (event) {
   event.waitUntil(
