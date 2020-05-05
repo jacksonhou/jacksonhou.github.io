@@ -53,10 +53,81 @@
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/ajax.js"></script>
 </head>
 
 <body>
-	<h1>将网站改造成 pwa 应用</h1>
+	<div class="wrapper" style="position: relative;height: 100%;">
+		<div id="_header" style="height: 80px;">
+
+			<header style="top: 0">
+				<div id="_title">
+					<img class="logo" src="./images/feccnews-1.png">
+					<a href="https://m.onlineweb.mobi/search?search_term=&brand=tinno" class="search"></a>
+				</div>
+				<section class="top-menu">
+					<div id="J_top_menu" class="top-menu-list">
+						<!-- coronavirus, trending, news, weather, entertainment, sports, money, lifestyle, health, foodanddrink, travel, autos, video  -->
+						<!-- <a class="active" data-type="coronavirus">coronavirus</a>
+						<a data-type="trending">trending</a>
+						<a data-type="news" class="">news</a>
+						<a data-type="weather" class="">weather</a>
+						<a data-type="entertainment" class="">entertainment</a>
+						<a data-type="sports" class="">sports</a>
+						<a data-type="money" class="">money</a>
+						<a data-type="lifestyle" class="">lifestyle</a>
+						<a data-type="health" class="">health</a>
+						<a data-type="foodanddrink" class="">foodanddrink</a>
+						<a data-type="travel" class="">travel</a>
+						<a data-type="autos" class="">autos</a>
+						<a data-type="video" class="">video</a> -->
+					</div>
+
+				</section>
+			</header>
+		</div>
+
+
+		<div id="J_content" class="news-list" style="position: absolute;">
+			<div id="top-text" style="text-align: center;background-color: #fff;">Loading...</div>
+			<div id="J_news_list" class="news-list-wrap active_news">
+
+			</div>
+		</div>
+	</div>
+
+	<div id="copyright">
+		Powered By Microsoft News
+	</div>
+
+	<script type="text/javascript">
+		function goTop() {
+			document.documentElement.scrollTop = document.body.scrollTop = 0;
+			document.getElementsByTagName('header')[0].style.position = 'relative';
+		}
+		var _isSendInfo = false;
+		var _isSendShow = false;
+		var hiddenProperty = 'hidden' in document ? 'hidden' :
+			'webkitHidden' in document ? 'webkitHidden' :
+			'mozHidden' in document ? 'mozHidden' : null;
+		var visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
+		var onVisibilityChange = function () {
+			if (!_isSendShow && !document[hiddenProperty]) {
+				_isSendShow = true;
+
+			}
+
+		}
+
+		if (document.addEventListener) {
+			document.addEventListener(visibilityChangeEvent, onVisibilityChange);
+		} else if (document.attachEvent) {
+			document.attachEvent("on" + visibilityChangeEvent, onVisibilityChange);
+		} else {
+
+		}
+	</script>
 	<script>
 		// 判断浏览器是否支持 service worker
 		if ('serviceWorker' in navigator) {
