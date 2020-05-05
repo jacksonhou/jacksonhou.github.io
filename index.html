@@ -39,8 +39,22 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<title>News</title>
 	<script type="text/javascript">
+		// pwa begin
+		if (navigator.serviceWorker) {
+			// For security reasons, a service worker can only control the pages that are in the same directory level or below it. That's why we put sw.js at ROOT level.
+			navigator.serviceWorker
+				.register('/js/sw.js')
+				.then((registration) => {
+					console.log('Service Worker Registered. ', registration)
+				})
+				.catch((error) => {
+					console.log('ServiceWorker registration failed: ', error)
+				})
+		}
+		// pwa end
 	</script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/sw.js"></script>
 </head>
 
 <body>
