@@ -1,0 +1,84 @@
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+header {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 80px;
+}
+header .top-menu {
+    position: relative;
+    height: 37px;
+    background-color: #ffffff;
+}
+header .top-menu .top-menu-list {
+    overflow: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+header .top-menu .top-menu-list a.active {
+    color: #f85959;
+}
+header .top-menu .top-menu-list a {
+    font-size: 17px;
+    line-height: 27px;
+    display: inline-block;
+    height: 26px;
+    margin: 5px 0 5px 5px;
+    padding: 0 10px;
+    -webkit-animation: fadeout .4s;
+    animation: fadeout .4s;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: #505050;
+}
+
+.providerLogo{
+    width:12px;
+    height:12px;
+    border:0px;
+}
+
+#_title{
+    height: 43px;
+    line-height: 43px;
+    background-color: #00B2A9;
+    /*background-color: #FF7182;*/
+    vertical-align: middle;
+}
+    #_title .logo{
+        width:116px;
+        height: 36px;
+        margin-top:4px;
+        margin-left:12px;
+        float: left;  
+    }
+
+    #_title .search{
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        background: url(../images/search.png) no-repeat center;
+        background-size: contain;
+        margin-top:4px;
+        margin-right:12px;
+        float: right; 
+    }
+
+#copyright{
+    position: fixed;
+    bottom:0px;
+    text-align: center;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    width: 100%;
+    background-color:#00B2A9;
+    color:#ffffff;
+    /*background-color:#FF7182;
+    color:#F8F8F2;*/
+}
