@@ -1,15 +1,15 @@
 var CACHE_VERSION = 'sw_v8';
 var CACHE_FILES = [
-  'index.html',
-  'images/feccnews-1.png',
-  'images/search.png',
-  'css/base.css',
-  'css/index.css',
-  'css/toutiao1.css',
-  'css/toutiao2.css',
-  'js/ajax.css',
-  'js/jquery.min.css',
-  'js/sw.css'
+  '/index.html',
+  '/images/feccnews-1.png',
+  '/images/search.png',
+  '/css/base.css',
+  '/css/index.css',
+  '/css/toutiao1.css',
+  '/css/toutiao2.css',
+  '/js/ajax.css',
+  '/js/jquery.min.css',
+  '/js/sw.css'
 ];
 self.addEventListener('install', function (event) {
   event.waitUntil(
