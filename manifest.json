@@ -1,15 +1,15 @@
 {
   "name": "News",
   "short_name": "News",
-  "description": "Microsoft News",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#4285f4",
   "icons": [{
     "src": "icons/pwa_icon_512.png",
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "background_color": "#fff",
-  "theme_color": "#000",
-  "start_url": "/",
-  "display": "standalone",
-  "orientation": "portrait"
+  "splash_pages": null
 }
