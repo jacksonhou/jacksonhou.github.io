@@ -27,18 +27,12 @@
 		content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=8">
 	<meta http-equiv="Expires" content="0">
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Cache-control" content="no-cache">
 	<meta http-equiv="Cache" content="no-cache">
-	<link rel="stylesheet" type="text/css" href="css/base.css" />
-	<link rel="stylesheet" type="text/css" href="css/toutiao1.css" />
-	<link rel="stylesheet" type="text/css" href="css/toutiao2.css" />
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
-
 	<!-- pwa begin -->
-	<link rel="manifest" href="/manifest.json">
+	<link rel="manifest" href="manifest.json">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="application-name" content="News">
@@ -62,6 +56,10 @@
 	<link rel="icon" sizes="384x384" href="icons/384x384.png">
 	<link rel="apple-touch-icon" sizes="384x384" href="icons/384x384.png">
 	<!-- pwa end -->
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/toutiao1.css" />
+	<link rel="stylesheet" type="text/css" href="css/toutiao2.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<title>News</title>
 	<script type="text/javascript">
 		// pwa begin
@@ -76,20 +74,6 @@
 					console.log('ServiceWorker registration failed: ', error)
 				})
 		}
-		// 取消添加到主屏幕
-		window.addEventListener('beforeinstallprompt', function (e) {
-			e.preventDefault();
-			return false;
-		});
-
-		// 添加到主屏幕后响应
-		window.addEventListener('beforeinstallprompt', function (event) {
-			event.userChoice.then(result => {
-				console.log(result);
-				// {outcome: "dismissed", platform: ""} // 取消添加
-				// {outcome: "accepted", platform: "web"} // 完成添加
-			});
-		});
 		// pwa end
 	</script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
