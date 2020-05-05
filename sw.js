@@ -1,4 +1,4 @@
-var CACHE_VERSION = 'sw_v8';
+var CACHE_VERSION = 'sw_v9';
 var CACHE_FILES = [
   '/index.html',
   '/images/feccnews-1.png',
