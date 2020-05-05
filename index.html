@@ -38,7 +38,7 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 
 	<!-- pwa begin -->
-	<link rel="manifest" href="manifest.json">
+	<link rel="manifest" href="/manifest.json">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="application-name" content="News">
@@ -76,6 +76,20 @@
 					console.log('ServiceWorker registration failed: ', error)
 				})
 		}
+		// 取消添加到主屏幕
+		window.addEventListener('beforeinstallprompt', function (e) {
+			e.preventDefault();
+			return false;
+		});
+
+		// 添加到主屏幕后响应
+		window.addEventListener('beforeinstallprompt', function (event) {
+			event.userChoice.then(result => {
+				console.log(result);
+				// {outcome: "dismissed", platform: ""} // 取消添加
+				// {outcome: "accepted", platform: "web"} // 完成添加
+			});
+		});
 		// pwa end
 	</script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
