@@ -14,50 +14,35 @@
 	<meta http-equiv="Cache-control" content="no-cache">
 	<meta http-equiv="Cache" content="no-cache">
 	<!-- pwa begin -->
-	<link rel="manifest" href="manifest.json">
+	<link rel="manifest" href="/pwa/manifest.json">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="application-name" content="News">
 	<meta name="apple-mobile-web-app-title" content="News">
 	<meta name="msapplication-starturl" content="/">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" sizes="512x512" href="icons/512x512.png">
-	<link rel="apple-touch-icon" sizes="512x512" href="icons/512x512.png">
-	<link rel="icon" sizes="72x72" href="icons/72x72.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="icons/72x72.png">
-	<link rel="icon" sizes="96x96" href="icons/96x96.png">
-	<link rel="apple-touch-icon" sizes="96x96" href="icons/96x96.png">
-	<link rel="icon" sizes="128x128" href="icons/128x128.png">
-	<link rel="apple-touch-icon" sizes="128x128" href="icons/128x128.png">
-	<link rel="icon" sizes="144x144" href="icons/144x144.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="icons/144x144.png">
-	<link rel="icon" sizes="152x152" href="icons/152x152.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="icons/152x152.png">
-	<link rel="icon" sizes="192x192" href="icons/192x192.png">
-	<link rel="apple-touch-icon" sizes="192x192" href="icons/192x192.png">
-	<link rel="icon" sizes="384x384" href="icons/384x384.png">
-	<link rel="apple-touch-icon" sizes="384x384" href="icons/384x384.png">
+	<link rel="icon" sizes="72x72" href="/pwa/icons/72x72.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/pwa/icons/72x72.png">
+	<link rel="icon" sizes="96x96" href="/pwa/icons/96x96.png">
+	<link rel="apple-touch-icon" sizes="96x96" href="/pwa/icons/96x96.png">
+	<link rel="icon" sizes="128x128" href="/pwa/icons/128x128.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="/pwa/icons/128x128.png">
+	<link rel="icon" sizes="144x144" href="/pwa/icons/144x144.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/pwa/icons/144x144.png">
+	<link rel="icon" sizes="152x152" href="/pwa/icons/152x152.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/pwa/icons/152x152.png">
+	<link rel="icon" sizes="192x192" href="/pwa/icons/192x192.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="/pwa/icons/192x192.png">
+	<link rel="icon" sizes="384x384" href="/pwa/icons/384x384.png">
+	<link rel="apple-touch-icon" sizes="384x384" href="/pwa/icons/384x384.png">
+	<link rel="icon" sizes="512x512" href="/pwa/icons/512x512.png">
+	<link rel="apple-touch-icon" sizes="512x512" href="/pwa/icons/512x512.png">
 	<!-- pwa end -->
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
 	<link rel="stylesheet" type="text/css" href="css/toutiao1.css" />
 	<link rel="stylesheet" type="text/css" href="css/toutiao2.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<title>News</title>
-	<script type="text/javascript">
-		// pwa begin
-		if (navigator.serviceWorker) {
-			// For security reasons, a service worker can only control the pages that are in the same directory level or below it. That's why we put sw.js at ROOT level.
-			navigator.serviceWorker
-				.register('sw.js')
-				.then((registration) => {
-					console.log('Service Worker Registered. ', registration)
-				})
-				.catch((error) => {
-					console.log('ServiceWorker registration failed: ', error)
-				})
-		}
-		// pwa end
-	</script>
 	<!-- Google Analytics -->
 	<script>
 		(function (i, s, o, g, r, a, m) {
@@ -76,6 +61,7 @@
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->
+	<script type="text/javascript" src="js/sw-registration.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 
